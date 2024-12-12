@@ -1,0 +1,23 @@
+<main>
+  <section class="form-section">
+    <h1 class="signup-title">Cuide da sua saúde onde você estiver</h1>
+    <br>
+    <form (ngSubmit)="submit()">
+    <h3>Qual seu tipo de cadastro?</h3>
+    <input type="radio" id="registerType" name="registerType" [(ngModel)]="registerType" value="user">
+    <label for="registerType">Usuário</label>
+    <input type="radio" id="register" name="registerType" [(ngModel)]="registerType"value="professional">
+    <label for="registerType">Profissional</label>
+     <div class="btn-wrapper">
+      <button type="submit" class="btn-primary">Próximo</button>
+     </div>
+    </form>
+  </section>
+  <section class="main-section">
+      <img class=logo src="/assets/svg/logoHealth.png"/>
+  </section>
+</main>
+
+
+
+

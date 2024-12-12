@@ -1,0 +1,115 @@
+<div class="menu-container">
+    <header>
+      <button
+          class="btn-menu" 
+          (click)="showMenu()"
+      >
+  
+      <img
+        src="/assets/svg/barra-de-menu.png"
+        class="imagem-menu-lateral"
+      />
+    
+      </button>
+    
+      <img 
+          src="/assets/svg/logoGetHealth.png"
+          class="logo-superior"    
+      />
+    
+    
+      <button
+          class="btn-bell" 
+          (click)="openNotification()"
+      >
+          <img
+              src="/assets/svg/bell.png"
+              class="img-bell"
+          />
+      </button>
+    
+    </header>
+    
+    
+    <main>
+      <aside *ngIf="isMenuVisible">
+        <button (click)="navigateTo('/menu-inicial')">
+          <img src="/assets/svg/home.png" alt="Home" />
+        </button>
+        <button (click)="navigateTo('/search')">
+          <img src="/assets/svg/search.png" alt="Pesquisar" />
+        </button>
+        <button (click)="navigateTo('/calendar')">
+          <img src="/assets/svg/calendar.png" alt="Agendamento" />
+        </button>
+        <button (click)="navigateTo('/profile')">
+          <img src="/assets/svg/perfil.png" alt="Perfil" />
+        </button>
+        <button class="exit" (click)="logout()"><img src="/assets/svg/exit.png"/></button>
+    
+      </aside>
+
+      <h2>Serviços</h2>
+    
+      <section class="leftSide">    
+
+        <button class="card">
+          <img src="/assets/svg/agendFisio.png">
+        </button>
+        <button class="card">
+          <img src="/assets/svg/agendPerso.png">
+        </button>
+        
+        <!-- <div class="card">
+            <button class="cardTitleButton"><h3>Personal Trainer</h3></button>
+            <img src="/assets/svg/personaltrainer.png" class="cardImg"/>
+              <h2>Agendado para o dia 13/12/2024</h2>
+              <h3>às 17:00 </h3>
+            <div class="cardButtons">
+                <button > Desmarcar </button>                
+                <button > Check-in </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <button class="cardTitleButton"><h3>Fisioterapia</h3></button>
+            <img src="/assets/svg/fisioterapia.png" class="cardImg"/>
+              <span>Agendado para o dia 13/12/2024</span>
+              <span>às 17:00 </span>
+            <div class="cardButtons">
+                <button > Desmarcar </button>                
+                <button > Check-in </button>
+            </div>
+        </div> -->
+        
+      </section>
+    
+      <section class="rightSide">
+        <h1>Histórico de Serviços de {{ userDetails?.name }}</h1>
+          
+        <h2> Últimos Serviços utilizados </h2>
+        
+
+        <span> {{agendamentosDoDia}} </span>
+
+        <button class="seeMore">Ver mais</button>
+      </section>
+    </main>
+    
+    
+    <footer>
+    
+    </footer>
+    <!-- <h1>Bem-vindo(a), {{ userDetails?.name }}</h1>
+  
+    <button (click)="loadUserDetails()">Ver Detalhes do Usuário</button>
+    
+  
+    <section *ngIf="userDetails">
+      <h2>Detalhes do Usuário</h2>
+      <p><strong>Nome:</strong> {{ userDetails.name }}</p>
+      <p><strong>Email:</strong> {{ userDetails.email }}</p>
+    </section> -->
+  
+  </div>
+  

@@ -1,0 +1,81 @@
+<app-default-login-layout
+  primaryBtnText="Cadastre-se"
+  secondaryBtnText="Entrar"
+  (submit)="submit()"
+  (navigate)="navigate()"
+  [disablePrimaryBtn]="!signupForm.valid"
+>
+  <!-- Título separado do formulário -->
+  <h1 class="signup-title">Cuide da sua saúde onde você estiver</h1>
+
+
+<div class="formularioCliente">
+  <form [formGroup]="signupForm">
+    <app-primary-input
+      formControlName="name"
+      inputName="name"
+      type="text"
+      label="Nome"
+    >
+      <img src="/assets/svg/email-icon.svg" alt="ícone de email" />
+    </app-primary-input>
+
+    <app-primary-input
+      formControlName="phone"
+      inputName="phone"
+      type="text"
+      label="Telefone"
+      placeholder="(81) 90000-0000"
+    >
+      <img src="/assets/svg/email-icon.svg" alt="ícone de email" />
+    </app-primary-input>
+
+    <app-primary-input
+    formControlName="cpf"
+    inputName="cpf"
+    type="text"
+    label="CPF"
+    placeholder="111.000.111-00"
+    >
+      <img src="/assets/svg/email-icon.svg" alt="ícone de email" />
+    </app-primary-input>
+
+    <app-primary-input
+    formControlName="birth"
+    inputName="birth"
+    type="text"
+    label="Data de nascimento"
+    placeholder="09/08/2005"
+    >
+      <img src="/assets/svg/email-icon.svg" alt="ícone de email" />
+    </app-primary-input>
+    
+    <app-primary-input
+      formControlName="email"
+      inputName="email"
+      type="email"
+      label="Email"
+      placeholder="exemple@hotmail.com"
+    >
+      <img src="/assets/svg/email-icon.svg" alt="ícone de email" />
+    </app-primary-input>
+    <app-primary-input
+      formControlName="password"
+      inputName="password"
+      type="password"
+      label="Senha"
+    >
+      <img src="/assets/svg/password-icon.svg" alt="ícone de senha" />
+    </app-primary-input>
+    <app-primary-input
+      formControlName="passwordConfirm"
+      inputName="passwordConfirm"
+      type="password"
+      label="Confirme sua senha"
+    >
+      <img src="/assets/svg/password-icon.svg" alt="ícone de confirmação de senha" />
+    </app-primary-input>
+  </form>
+</div>
+
+</app-default-login-layout>

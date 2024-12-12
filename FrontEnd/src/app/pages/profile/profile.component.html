@@ -1,0 +1,112 @@
+<div class="menu-container">
+    <header>
+      <button
+          class="btn-menu" 
+          (click)="showMenu()"
+      >
+  
+      <img
+        src="/assets/svg/barra-de-menu.png"
+        class="imagem-menu-lateral"
+      />
+    
+      </button>
+    
+      <img 
+          src="/assets/svg/logoGetHealth.png"
+          class="logo-superior"    
+      />
+    
+    
+      <button
+          class="btn-bell" 
+          (click)="openNotification()"
+      >
+          <img
+              src="/assets/svg/bell.png"
+              class="img-bell"
+          />
+      </button>
+    
+    </header>
+    
+    
+    <main>
+      <aside *ngIf="isMenuVisible">
+        <button (click)="navigateTo('/home')">
+          <img src="/assets/svg/home.png" alt="Home" />
+        </button>
+        <button (click)="navigateTo('/search')">
+          <img src="/assets/svg/search.png" alt="Pesquisar" />
+        </button>
+        <button (click)="navigateTo('/calendar')">
+          <img src="/assets/svg/calendar.png" alt="Agendamento" />
+        </button>
+        <button (click)="navigateTo('/profile')">
+          <img src="/assets/svg/perfil.png" alt="Perfil" />
+        </button>
+        <button class="exit" (click)="logout()"><img src="/assets/svg/exit.png"/></button>
+    
+      </aside>
+    
+      <section class="leftSide">
+
+            <img src="/assets/svg/perfil.png" class="personalPhoto"/>
+          <h1>Bem-vindo(a), {{ userDetails?.name }}</h1>
+          
+          <h2> Descrição </h2>
+    
+          <span> {{descricao}} </span>
+          <button class="editProfile">Editar suas informações</button>
+      </section>
+
+      <section class="middle">
+        <h2>Cartões Cadastrados</h2>
+        <div class="creditcard">
+                <img src="/assets/svg/mastercard.png">
+        </div>
+        <div class="creditcard">
+                <img src="/assets/svg/visacard.png">
+        </div>
+
+
+      </section>
+    
+      <section class="rightSide">
+        <h2>Serviços</h2>
+  
+        <button class="card">
+            <img src="/assets/svg/fisioterapia.png">
+    
+          </button>
+          <button class="card">
+            <img src="/assets/svg/personaltrainer.png">
+          </button>
+          <button class="card">
+            <img src="/assets/svg/nutrição.png">
+          </button>
+          <button class="card, ads" >
+            <img src="/assets/svg/ads.png">
+          </button>
+    
+    
+      </section>
+    </main>
+    
+    
+    <footer>
+    
+    </footer>
+    <!-- <h1>Bem-vindo(a), {{ userDetails?.name }}</h1>
+  
+    <button (click)="loadUserDetails()">Ver Detalhes do Usuário</button>
+    
+  
+    <section *ngIf="userDetails">
+      <h2>Detalhes do Usuário</h2>
+      <p><strong>Nome:</strong> {{ userDetails.name }}</p>
+      <p><strong>Email:</strong> {{ userDetails.email }}</p>
+    </section> -->
+  
+  </div>
+  
